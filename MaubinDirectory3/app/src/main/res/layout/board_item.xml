@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/b_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/home_variant"
+            android:gravity="center|left"
+            android:text="\t\tA Wa Ya"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/b_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/account"
+            android:gravity="center|left"
+            android:text="\t\tFemale"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/price_per_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/coin"
+            android:gravity="center|left"
+            android:text="\t\t1000 kyats per month"
+            android:textColor="@android:color/holo_green_dark"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/b_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="phone"
+            android:drawableLeft="@drawable/ic_phone"
+            android:gravity="center|left"
+            android:text="\t\t09324728347" />
+
+        <TextView
+            android:id="@+id/b_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/map_marker"
+            android:gravity="center|left"
+            android:text="\t\tNO.1"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/b_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/mapbutton"
+                android:drawableTop="@drawable/google_maps"
+                android:padding="3dp"
+                android:text="View Map"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/b_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/mapbutton"
+                android:drawableTop="@drawable/share_variant_black"
+                android:padding="3dp"
+                android:text="Share"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

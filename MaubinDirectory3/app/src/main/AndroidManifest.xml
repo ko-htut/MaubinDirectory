@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dell.maubindirectory">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <receiver
+        android:name="NetworkChangeReceiver"
+        android:label="NetworkChangeReceiver">
+        <intent-filter>
+            <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+        </intent-filter>
+    </receiver>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/maubin_d_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".activity.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name=".activity.List_pagoda"
+            android:label="Pagodas"
+            android:parentActivityName=".activity.MainActivity" />
+
+        <activity
+            android:name=".activity.Pagoda_information"
+            android:parentActivityName=".activity.List_pagoda" />
+        <activity
+            android:name=".activity.List_bank"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.Bank_information"
+            android:parentActivityName=".activity.List_bank" />
+        <activity
+            android:name=".activity.List_uni"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.University_information"
+            android:parentActivityName=".activity.List_uni" />
+
+        <activity
+            android:name=".activity.List_market"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.Market_information"
+            android:parentActivityName=".activity.List_market" />
+
+        <activity
+            android:name=".activity.List_ATM"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.List_pump"
+            android:parentActivityName=".activity.MainActivity" />
+
+        <activity
+            android:name=".activity.List_guest"
+            android:parentActivityName=".activity.MainActivity" />
+
+        <activity
+            android:name=".activity.Guest_informatin"
+            android:parentActivityName=".activity.List_guest" />
+
+        <activity
+            android:name=".activity.List_res"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.Res_information"
+            android:parentActivityName=".activity.List_res" />
+
+        <activity
+            android:name=".activity.List_hospital"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity android:name=".activity.MapActivity" />
+
+        <activity
+            android:name=".activity.About"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.List_other"
+            android:parentActivityName=".activity.MainActivity" />
+
+        <activity
+            android:name=".activity.List_board"
+            android:parentActivityName=".activity.MainActivity" />
+
+        <activity
+            android:name=".activity.List_office"
+            android:parentActivityName=".activity.MainActivity" />
+
+        <activity
+            android:name=".activity.List_image"
+            android:parentActivityName=".activity.List_other" />
+    </application>
+
+</manifest>
